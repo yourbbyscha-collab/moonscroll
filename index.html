@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MoonScroll 🌙</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">🌙 MoonScroll</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#library">Library</a>
+      <a href="#favorites">Favorite</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+      <p class="welcome">WELCOME TO YOUR PRIVATE LIBRARY</p>
+
+      <h1>
+        Your stories.<br>
+        Your little universe. 🌙
+      </h1>
+
+      <p class="hero-text">
+        A private space to keep track of the stories you love
+        and continue reading whenever you want.
+      </p>
+
+      <button onclick="document.getElementById('library').scrollIntoView()">
+        Explore Library ✨
+      </button>
+
+    </section>
+
+
+    <!-- Library -->
+<section class="library" id="library">
+
+  <div class="section-title">
+    <div>
+      <p class="small-title">PICK UP WHERE YOU LEFT OFF</p>
+      <h2>Continue Reading</h2>
+    </div>
+
+    <span>View all →</span>
+  </div>
+
+
+  <!-- Comic Container -->
+  <div class="comic-container">
+
+    <!-- Comic 1 -->
+    <a href="detail.html" class="comic-link">
+      <div class="comic-card">
+
+        <div class="comic-cover">
+        <img src="images/Cover/motherinlaw.jpg" alt="Cover">
+        </div>
+
+        <h3>Not Your Monster-In-Law</h3>
+        <p>Chapter 1</p>
+
+      </div>
+    </a>
+
+
+    <!-- Comic 2 -->
+    <a href="#" class="comic-link">
+      <div class="comic-card">
+
+        <div class="comic-cover">
+          🌸
+        </div>
+
+        <h3>Spring Letters</h3>
+        <p>Chapter 12</p>
+
+      </div>
+    </a>
+
+
+    <!-- Comic 3 -->
+    <a href="#" class="comic-link">
+      <div class="comic-card">
+
+        <div class="comic-cover">
+          🦋
+        </div>
+
+        <h3>Blue Butterfly</h3>
+        <p>Chapter 8</p>
+
+      </div>
+    </a>
+
+
+    <!-- Comic 4 -->
+    <a href="#" class="comic-link">
+      <div class="comic-card">
+
+        <div class="comic-cover">
+          🌹
+        </div>
+
+        <h3>Rose Between Us</h3>
+        <p>Chapter 20</p>
+
+      </div>
+    </a>
+
+
+    <!-- Comic 5 -->
+    <a href="#" class="comic-link">
+      <div class="comic-card">
+
+        <div class="comic-cover">
+          ✨
+        </div>
+
+        <h3>Midnight Wish</h3>
+        <p>Chapter 5</p>
+
+      </div>
+    </a>
+
+
+    <!-- Comic 6 -->
+    <a href="#" class="comic-link">
+      <div class="comic-card">
+
+        <div class="comic-cover">
+          🌧️
+        </div>
+
+        <h3>Rainy Days</h3>
+        <p>Chapter 15</p>
+
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

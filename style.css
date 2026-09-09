@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(124, 108, 255, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(80, 150, 255, 0.12), transparent 35%),
+    #0b0b14;
+
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 10%;
+
+  background: rgba(15, 15, 28, 0.75);
+
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  color: #bdbdcc;
+  text-decoration: none;
+
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+
+  max-width: 800px;
+  margin: auto;
+
+  padding: 110px 20px 90px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #c9c3ff,
+    #8da8ff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: #aaaabd;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+button {
+  background: linear-gradient(
+    135deg,
+    #7c6cff,
+    #5c8dff
+  );
+
+  color: white;
+
+  border: none;
+  border-radius: 30px;
+
+  padding: 15px 28px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(92, 141, 255, 0.25);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px rgba(92, 141, 255, 0.4);
+}
+
+/* =========================
+   LIBRARY
+========================= */
+
+.library {
+  padding: 50px 20% 100px;
+
+  max-width: 1400px;
+  margin: auto;
+}
+
+.library h2 {
+  font-size: 28px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   COMIC CARDS
+========================= */
+
+.comic-container {
+  display: flex;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+.comic-card {
+  width: 200px;
+
+  padding: 12px;
+
+  background: rgba(25, 25, 40, 0.7);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 18px;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.comic-card:hover {
+  transform: translateY(-8px);
+
+  background: rgba(35, 35, 55, 0.9);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.comic-cover {
+  height: 260px;
+
+  background:
+    linear-gradient(
+      160deg,
+      #302b63,
+      #24243e
+    );
+
+  border-radius: 13px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 75px;
+
+  margin-bottom: 16px;
+
+  overflow: hidden;
+}
+
+.comic-card h3 {
+  font-size: 16px;
+
+  margin-bottom: 7px;
+}
+
+.comic-card p {
+  color: #9999b0;
+
+  font-size: 13px;
+
+  padding-bottom: 5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 18px 5%;
+  }
+
+  nav {
+    gap: 0;
+  }
+
+  nav a {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 80px 20px 60px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .library {
+    padding: 30px 5% 70px;
+  }
+
+  .comic-card {
+    width: 160px;
+  }
+
+  .comic-cover {
+    height: 210px;
+  }
+}
+
+/* =========================
+   WEBTOON READER
+========================= */
+
+.reader-header {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 8%;
+
+  background: #11111f;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  z-index: 1000;
+}
+
+.back-button {
+  color: white;
+  text-decoration: none;
+
+  padding: 8px 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+}
+
+.chapter-title {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.chapter-title span {
+  color: #9999b0;
+
+  font-size: 13px;
+
+  margin-top: 3px;
+}
+
+.moon-icon {
+  font-size: 22px;
+}
+
+
+/* =========================
+   COMIC PANELS
+========================= */
+
+.reader {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  padding: 0;
+
+  display: block;
+}
+
+.reader img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   READER FOOTER
+========================= */
+
+.reader-footer {
+  text-align: center;
+
+  padding: 50px 20px;
+
+  background: #0b0b14;
+}
+
+.reader-footer p {
+  color: #9999b0;
+
+  margin-bottom: 25px;
+}
+
+.reader-footer a {
+  display: inline-block;
+
+  color: white;
+  text-decoration: none;
+
+  background: #7c6cff;
+
+  padding: 12px 25px;
+
+  border-radius: 25px;
+}
+
+.comic-link {
+  text-decoration: none;
+  color: white;
+
+  display: block;
+}
+
+.comic-link h3 {
+  color: white;
+}
+
+.comic-link p {
+  color: #9999b0;
+}
+
+/* =========================
+   STORY DETAIL PAGE
+========================= */
+
+.detail-page {
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 70px 8%;
+
+  display: grid;
+
+  grid-template-columns: 280px 1fr;
+
+  gap: 60px;
+}
+
+
+/* LEFT SIDE */
+
+.story-sidebar {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+.detail-cover {
+  width: 100%;
+
+  height: 400px;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.4);
+}
+
+
+/* START BUTTON */
+
+.start-reading {
+  text-decoration: none;
+
+  text-align: center;
+
+  background:
+    linear-gradient(135deg,
+    #7c6cff,
+    #5c8dff);
+
+  color: white;
+
+  padding: 17px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.start-reading:hover {
+  transform: translateY(-3px);
+}
+
+
+/* SECONDARY BUTTON */
+
+.secondary-button {
+  width: 100%;
+
+  background: #1b1b2b;
+
+  color: #ccccdd;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 12px;
+
+  padding: 17px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+}
+
+
+/* RIGHT SIDE */
+
+.story-info {
+  max-width: 900px;
+}
+
+
+.breadcrumb {
+  color: #85859c;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 20px;
+}
+
+
+.story-info h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: 52px;
+
+  margin-bottom: 15px;
+}
+
+
+.subtitle {
+  color: #9c9cb3;
+
+  font-size: 17px;
+
+  margin-bottom: 25px;
+}
+
+
+/* BADGES */
+
+.badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+
+.badge {
+  background: #25253b;
+
+  padding: 9px 14px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  color: #c9c9dd;
+}
+
+
+.badge.safe {
+  background: #173d38;
+
+  color: #6ee7c8;
+}
+
+
+.badge.releasing {
+  color: #70e7a0;
+}
+
+
+/* STATS */
+
+.stats {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 30px;
+
+  color: #c4c4d5;
+
+  margin-bottom: 30px;
+
+  font-size: 16px;
+}
+
+
+/* DESCRIPTION */
+
+.description {
+  color: #b1b1c2;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  margin-bottom: 40px;
+}
+
+
+/* INFO SECTIONS */
+
+.info-section {
+  margin-bottom: 25px;
+}
+
+
+.label {
+  color: #77778e;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.tags span {
+  background: #1d1d30;
+
+  color: #bcbcd0;
+
+  padding: 10px 17px;
+
+  border-radius: 25px;
+
+  font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .detail-page {
+
+    grid-template-columns: 1fr;
+
+    padding: 40px 6%;
+
+    gap: 40px;
+
+  }
+
+
+  .story-sidebar {
+
+    max-width: 300px;
+
+  }
+
+
+  .story-info h1 {
+
+    font-size: 40px;
+
+  }
+
+}
